@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 // ./src/pages/Home/index.tsx
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <h1>hello1-钱大撒大撒大撒钱撒打算水水水水水水水水水水水水水水水水水水水钱212121212</h1>
+      <h1>hello1-ssr</h1>
       <button
         onClick={(): void => {
           alert("hello-ssr");
@@ -10,6 +14,14 @@ const Home = () => {
       >
         alert
       </button>
+      <a href="http://127.0.0.1:3000/demo">链接跳转</a>
+      <span
+        onClick={(): void => {
+          navigate("/demo");
+        }}
+      >
+        路由跳转
+      </span>
     </div>
   );
 };
