@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch src server_build/bundle.js",
+    "start": "nodemon ./server_build/bundle.js --watch",
     "build:server": "webpack build --config ./config/webpack.server.js --watch",
     "build:client": "npx webpack build --config ./config/webpack.client.js --watch"
   },
@@ -32,6 +32,7 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
